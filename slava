@@ -1,0 +1,11 @@
+/*
+ * free.c
+ *
+ * Very simple linked-list based malloc()/free().
+ */
+
+#include <syslinux/firmware.h>
+static struct free_arena_header *
+__free_block(struct free_arena_header *ah)
+{
+    struct free_arena_header *pah, *nah;
